@@ -29,4 +29,21 @@ return {
 			"neovim/nvim-lspconfig",
 		},
 	},
+	{
+		"mason-tool-installer.nvim",
+		opts = {
+			ensure_installed = {
+				"prettierd",
+				"prettier",
+				"isort",
+				"black",
+				"ruff",
+				"eslint_d",
+				"cpplint",
+			},
+		},
+		dependencies = {
+			"mason-org/mason.nvim",
+		},
+	},
 }
