@@ -18,6 +18,7 @@ require("lazy").setup({
 	spec = {
 		-- import your plugins
 		{ import = "jwoong.plugins" },
+		{ import = "jwoong.plugins.lsp" },
 	},
 	checker = {
 		enabled = true,
