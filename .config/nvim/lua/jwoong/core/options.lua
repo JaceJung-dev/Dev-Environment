@@ -36,6 +36,14 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as defaulf register
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
+-- file auto reload
+opt.autoread = true
+
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
+	pattern = "*",
+	command = "checktime",
+})
+
 -- etc
 opt.encoding = "UTF-8"
 opt.cmdheight = 1
