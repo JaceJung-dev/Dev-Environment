@@ -44,6 +44,22 @@ vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
 	command = "checktime",
 })
 
+-- search project root directory venv (python)
+vim.api.nvim_create_autocmd("VimEnter", {
+	pattern = "*",
+	callback = function()
+		local venv_paths = { ".venv", "venv", ".env" }
+
+		for _, venv in ipairs(venv_paths) do
+			local venv_python = vim.fn.getcwd() .. "/" .. venv .. "/bin/python"
+			if vim.fn.filereadable(venv_python) == 1 then
+				vim.g.python3_host_prog = venv_python
+				break
+			end
+		end
+	end,
+})
+
 -- etc
 opt.encoding = "UTF-8"
 opt.cmdheight = 1
