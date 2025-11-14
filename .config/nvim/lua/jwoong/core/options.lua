@@ -7,7 +7,7 @@ local opt = vim.opt
 -- opt.shiftwidth = 4 -- 4 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
-opt.smartindent = true
+opt.smartindent = false
 
 opt.wrap = false
 
@@ -41,24 +41,24 @@ opt.splitbelow = true -- split horizontal window to the bottom
 opt.autoread = true
 
 vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
-	pattern = "*",
-	command = "checktime",
+  pattern = "*",
+  command = "checktime",
 })
 
 -- search project root directory venv (python)
 vim.api.nvim_create_autocmd("VimEnter", {
-	pattern = "*",
-	callback = function()
-		local venv_paths = { ".venv", "venv", ".env" }
+  pattern = "*",
+  callback = function()
+    local venv_paths = { ".venv", "venv", ".env" }
 
-		for _, venv in ipairs(venv_paths) do
-			local venv_python = vim.fn.getcwd() .. "/" .. venv .. "/bin/python"
-			if vim.fn.filereadable(venv_python) == 1 then
-				vim.g.python3_host_prog = venv_python
-				break
-			end
-		end
-	end,
+    for _, venv in ipairs(venv_paths) do
+      local venv_python = vim.fn.getcwd() .. "/" .. venv .. "/bin/python"
+      if vim.fn.filereadable(venv_python) == 1 then
+        vim.g.python3_host_prog = venv_python
+        break
+      end
+    end
+  end,
 })
 
 -- etc
