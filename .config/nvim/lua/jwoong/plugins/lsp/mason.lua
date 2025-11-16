@@ -11,6 +11,7 @@ return {
         "cssls", -- CSS
         "tailwindcss", -- Tailwind CSS
         "pyright", -- python
+        "ltex",
       },
     },
     dependencies = {
