@@ -11,7 +11,7 @@ return {
         "cssls", -- CSS
         "tailwindcss", -- Tailwind CSS
         "pyright", -- python
-        "ltex",
+        "ltex", -- spell/grammar check
       },
     },
     dependencies = {
@@ -31,11 +31,10 @@ return {
     },
   },
   {
-    "mason-tool-installer.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
     opts = {
       ensure_installed = {
         "prettierd",
-        "prettier",
         "isort",
         "black",
         "ruff",
