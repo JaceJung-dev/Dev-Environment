@@ -25,7 +25,7 @@
 | **Git** | gitsigns, lazygit |
 | **포맷팅/린팅** | conform.nvim, nvim-lint |
 | **UI** | lualine, bufferline, alpha, catppuccin, dressing |
-| **코드** | treesitter, autopairs, nvim-ts-autotag, todo-comments, trouble |
+| **코드** | treesitter, autopairs, nvim-surround, nvim-ts-autotag, todo-comments, trouble |
 | **기타** | which-key, auto-session, vim-maximizer, render-markdown, indent-blankline |
 
 ### LSP 서버
@@ -52,6 +52,134 @@
 | ruff | Python 린터 |
 | eslint_d | JS/TS 린터 |
 | cpplint | C/C++ 린터 |
+
+## 단축키
+
+`<leader>` = `Space`, `<C->` = `Control`, `<CR>` = `Enter`
+
+### 기본
+
+| 키맵 | 동작 |
+|------|------|
+| `jk` | ESC (insert mode) |
+| `<leader>nh` | 검색 하이라이트 제거 |
+| `<leader>+` / `<leader>-` | 숫자 증가/감소 |
+
+### 윈도우/탭
+
+| 키맵 | 동작 |
+|------|------|
+| `<leader>sv` | 수직 분할 |
+| `<leader>sh` | 수평 분할 |
+| `<leader>se` | 분할 크기 동일하게 |
+| `<leader>sx` | 현재 분할 닫기 |
+| `<leader>sm` | 분할창 최대화/복원 |
+| `<leader>to` | 새 탭 |
+| `<leader>tx` | 탭 닫기 |
+| `<leader>tn` / `<leader>tp` | 다음/이전 탭 |
+| `<leader>tf` | 현재 버퍼를 새 탭으로 |
+
+### 파일 탐색
+
+| 키맵 | 동작 |
+|------|------|
+| `<leader>ee` | 파일 탐색기 토글 |
+| `<leader>ef` | 현재 파일 위치로 탐색기 토글 |
+| `<leader>ec` | 탐색기 전체 접기 |
+| `<leader>er` | 탐색기 새로고침 |
+
+### Telescope 검색
+
+| 키맵 | 동작 |
+|------|------|
+| `<leader>ff` | 파일 찾기 |
+| `<leader>fr` | 최근 파일 |
+| `<leader>fs` | 문자열 검색 (live grep) |
+| `<leader>fc` | 커서 아래 문자열 검색 |
+| `<leader>ft` | Todo 검색 |
+
+### LSP
+
+| 키맵 | 동작 |
+|------|------|
+| `gR` | 참조 목록 |
+| `gD` | 선언으로 이동 |
+| `gd` | 정의로 이동 |
+| `gi` | 구현 목록 |
+| `gt` | 타입 정의 |
+| `K` | 커서 아래 문서 보기 |
+| `<leader>ca` | 코드 액션 |
+| `<leader>rn` | 이름 변경 |
+| `<leader>D` | 버퍼 전체 진단 |
+| `<leader>d` | 현재 줄 진단 (float) |
+| `[d` / `]d` | 이전/다음 진단 |
+| `<leader>rs` | LSP 재시작 |
+
+### Git
+
+| 키맵 | 동작 |
+|------|------|
+| `<leader>gg` | LazyGit 열기 |
+| `]h` / `[h` | 다음/이전 hunk |
+| `<leader>hs` | hunk 스테이징 |
+| `<leader>hr` | hunk 리셋 |
+| `<leader>hu` | 스테이징 취소 |
+| `<leader>hS` / `<leader>hR` | 파일 전체 stage/reset |
+| `<leader>hp` | hunk 미리보기 |
+| `<leader>hb` | 줄 blame |
+| `<leader>hB` | inline blame 토글 |
+| `<leader>hd` | 파일 diff |
+
+### Trouble 진단
+
+| 키맵 | 동작 |
+|------|------|
+| `<leader>xw` | 워크스페이스 진단 |
+| `<leader>xd` | 현재 파일 진단 |
+| `<leader>xq` | quickfix 목록 |
+| `<leader>xl` | location 목록 |
+| `<leader>xt` | Todo 목록 |
+
+### 포맷팅/린팅
+
+| 키맵 | 동작 |
+|------|------|
+| `<leader>mp` | 수동 포맷 |
+| `<leader>l` | 수동 린트 |
+
+### 세션
+
+| 키맵 | 동작 |
+|------|------|
+| `<leader>ww` | 세션 검색 |
+| `<leader>wr` | 세션 복원 |
+| `<leader>ws` | 세션 저장 |
+
+### Todo
+
+| 키맵 | 동작 |
+|------|------|
+| `]t` / `[t` | 다음/이전 todo |
+
+### 자동완성 (insert mode)
+
+| 키맵 | 동작 |
+|------|------|
+| `<C-k>` / `<C-j>` | 이전/다음 항목 |
+| `<C-b>` / `<C-f>` | 문서 스크롤 |
+| `<C-Space>` | 자동완성 트리거 |
+| `<C-e>` | 자동완성 닫기 |
+| `<CR>` | 선택 확정 |
+
+### Surround
+
+| 키맵 | 동작 | 예시 |
+|------|------|------|
+| `ys{motion}{char}` | 감싸기 | `ysiw"` → hello → `"hello"` |
+| `cs{old}{new}` | 변경 | `cs"'` → `"hello"` → `'hello'` |
+| `ds{char}` | 삭제 | `ds"` → `"hello"` → `hello` |
+| `yss{char}` | 줄 전체 감싸기 | `yss)` → 줄 전체를 `()` 로 |
+| `S{char}` | visual 모드에서 감싸기 | 선택 후 `S"` |
 
 ## 빠른 설치
 
