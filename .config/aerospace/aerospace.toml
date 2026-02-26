@@ -65,8 +65,8 @@ automatically-unhide-macos-hidden-apps = false
     s10 = 'secondary'
     B = 'main'
     E = 'main'
-    M = 'main'
     T = 'main'
+    M = 'secondary'
 
 [gaps]
     inner.horizontal = 10
