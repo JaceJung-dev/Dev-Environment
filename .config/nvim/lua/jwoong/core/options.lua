@@ -3,8 +3,8 @@ vim.cmd("let g:netrw_liststyle = 3") -- Use tree-style listing in netew (file ex
 local opt = vim.opt
 
 -- tab & indentation
--- opt.tabstop = 4 -- 4 spaces for tabs (prettier default)
--- opt.shiftwidth = 4 -- 4 spaces for indent width
+opt.tabstop = 4 -- 4 spaces for tabs (prettier default)
+opt.shiftwidth = 4 -- 4 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 opt.smartindent = false
@@ -43,22 +43,6 @@ opt.autoread = true
 vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
   pattern = "*",
   command = "checktime",
-})
-
--- search project root directory venv (python)
-vim.api.nvim_create_autocmd("VimEnter", {
-  pattern = "*",
-  callback = function()
-    local venv_paths = { ".venv", "venv", ".env" }
-
-    for _, venv in ipairs(venv_paths) do
-      local venv_python = vim.fn.getcwd() .. "/" .. venv .. "/bin/python"
-      if vim.fn.filereadable(venv_python) == 1 then
-        vim.g.python3_host_prog = venv_python
-        break
-      end
-    end
-  end,
 })
 
 -- etc
