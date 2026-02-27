@@ -5,6 +5,7 @@
 ## 포함된 설정
 
 - **Neovim** - LSP, auto-completion, treesitter 등 IDE 환경 설정
+- **Zsh** - Oh My Zsh 기반 셸 환경 + CLI 도구 설정
 - **WezTerm** - 모던 GPU 가속 터미널
 - **Tmux** - 터미널 멀티플렉서
 - **Aerospace** - 타일링 윈도우 매니저
@@ -52,6 +53,54 @@
 | ruff | Python 린터 |
 | eslint_d | JS/TS 린터 |
 | cpplint | C/C++ 린터 |
+
+## Zsh 설정
+
+### Oh My Zsh
+
+- 테마: Powerlevel10k
+- 플러그인: `git`, `zsh-autosuggestions`, `zsh-syntax-highlighting`, `web-search`
+
+### CLI 도구
+
+| 도구 | 역할 | 대체 대상 |
+|------|------|----------|
+| [zoxide](https://github.com/ajeetdsouza/zoxide) | 스마트 디렉토리 이동 | `cd` |
+| [eza](https://github.com/eza-community/eza) | 파일 목록 (아이콘, git 상태) | `ls` |
+| [bat](https://github.com/sharkdp/bat) | 구문 강조 파일 출력 | `cat` |
+| [fd](https://github.com/sharkdp/fd) | 빠른 파일 검색 | `find` |
+| [fzf](https://github.com/junegunn/fzf) | 퍼지 파인더 | - |
+| [delta](https://github.com/dandavella/delta) | Git diff 뷰어 | `diff` |
+| [thefuck](https://github.com/nvbn/thefuck) | 오타 명령어 자동 교정 | - |
+
+### fzf 설정
+
+- **백엔드**: fd (파일 검색 + 디렉토리 검색)
+- **테마**: Catppuccin Macchiato
+- **프리뷰**: bat (파일), eza --tree (디렉토리)
+- **통합**: [fzf-git.sh](https://github.com/junegunn/fzf-git.sh) (git 객체 퍼지 검색)
+
+### Aliases
+
+| Alias | 명령어 |
+|-------|--------|
+| `cd` | `z` (zoxide) |
+| `ls` | `eza --icons=always` |
+| `la` | `eza --icons=always --long --git -a` |
+| `lt` | `eza --icons=always --tree --level=2` |
+| `py_venv` | `python3 -m venv venv` |
+| `uv_venv` | `uv venv .venv` |
+| `lintfix` | `black . && isort . && flake8` |
+
+### 환경 관리
+
+| 도구 | 역할 |
+|------|------|
+| pyenv | Python 버전 관리 |
+| NVM | Node.js 버전 관리 |
+| bun | JavaScript 런타임/패키지 매니저 |
+| uv | Python 패키지 매니저 |
+| Pixi | Conda 대체 환경 관리 |
 
 ## 단축키
 
@@ -192,6 +241,7 @@ cd ~/dev_env
 # 심볼릭 링크 생성
 ln -s ~/dev_env/.config/nvim ~/.config/nvim
 ln -s ~/dev_env/.config/aerospace ~/.config/aerospace
+ln -s ~/dev_env/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dev_env/dotfiles/.wezterm.lua ~/.wezterm.lua
 ln -s ~/dev_env/dotfiles/.tmux.conf ~/.tmux.conf
 
