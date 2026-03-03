@@ -128,6 +128,9 @@ source $ZSH/oh-my-zsh.sh
 # 1. Environment Variables
 # ===============================
 
+# Editor (for yazi)
+export EDITOR="nvim"
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
@@ -189,6 +192,15 @@ eval "$(zoxide init zsh)"
 # Thefuck
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
+
+# Yazi (file manager)
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
 
 # ===============================
 # 4. Aliases
