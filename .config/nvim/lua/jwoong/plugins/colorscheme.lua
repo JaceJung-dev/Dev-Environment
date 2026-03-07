@@ -14,6 +14,13 @@ return {
 
       transparent_background = false,
 
+      custom_highlights = function(colors)
+        return {
+          IblIndent = { fg = colors.surface2 },
+          IblWhitespace = { fg = colors.surface2 },
+        }
+      end,
+
       integrations = {
         treesitter = true,
         which_key = true,
