@@ -23,6 +23,7 @@ return {
 				-- C/C++
 				"c",
 				"cpp",
+				"cmake",
 				-- Web Development
 				"html",
 				"css",

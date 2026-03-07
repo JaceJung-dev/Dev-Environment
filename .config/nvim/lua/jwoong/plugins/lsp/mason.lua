@@ -39,7 +39,6 @@ return {
         "black",
         "ruff",
         "eslint_d",
-        "cpplint",
       },
     },
     dependencies = {

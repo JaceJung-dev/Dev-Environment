@@ -9,10 +9,6 @@ return {
 			-- Python
 			python = { "ruff" }, -- alternative: pylint
 
-			-- C/C++
-			c = { "cpplint" }, -- alternative: cppcheck
-			cpp = { "cpplint" },
-
 			-- Web Development
 			javascript = { "eslint_d" },
 			typescript = { "eslint_d" },
