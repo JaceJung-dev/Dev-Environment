@@ -186,7 +186,11 @@ eval "$(pixi completion --shell zsh)"
 # Pyenv
 eval "$(pyenv init - zsh)"
 
+# Zsh: always resolve to physical path (fixes case mismatch on macOS APFS)
+setopt CHASE_LINKS
+
 # Zoxide (better cd)
+export _ZO_RESOLVE_SYMLINKS=1  # store real path in DB (fixes case mismatch on macOS APFS)
 eval "$(zoxide init zsh)"
 
 # Thefuck
