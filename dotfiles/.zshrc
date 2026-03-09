@@ -221,9 +221,35 @@ alias uv_source="source .venv/bin/activate"
 alias lintfix="black . && isort . && flake8"
 
 # eza (better ls)
-alias ls="eza --icons=always"
-alias la="eza --icons=always --long --git -a"
-alias lt="eza --icons=always --tree --level=2"
+# alias ls="eza --icons=always"
+# alias la="eza --icons=always --long --git -a"
+# alias lt="eza --icons=always --tree --level=2"
+
+function ls {
+  if [ -t 1 ]; then
+    command eza --icons=always "$@"
+  else
+    /bin/ls "$@"
+  fi
+}
+
+function la {
+  if [ -t 1 ]; then
+    command eza --icons=always --long --git -a "$@"
+  else
+    /bin/ls -la "$@"
+  fi
+}
+
+function lt {
+  if [ -t 1 ]; then
+    command eza --icons=always --tree --level=2 "$@"
+  else
+    /bin/ls -R "$@"
+  fi
+}
+
+unalias ls la lt 2>/dev/null
 
 # ===============================
 # 5. fzf
@@ -285,3 +311,4 @@ source ~/fzf-git.sh/fzf-git.sh
 
 # Bat (better cat)
 export BAT_THEME="Catppuccin Macchiato"
+
