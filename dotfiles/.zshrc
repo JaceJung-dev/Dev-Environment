@@ -261,6 +261,9 @@ function lt {
 
 unalias ls la lt 2>/dev/null
 
+# valgrind
+alias vg='valgrind --leak-check=yes --suppressions=$HOME/.valgrind/macos.supp'
+
 # ===============================
 # 5. fzf
 # ===============================
@@ -322,3 +325,7 @@ source ~/fzf-git.sh/fzf-git.sh
 # Bat (better cat)
 export BAT_THEME="Catppuccin Macchiato"
 
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/jwoong/.local/bin:$PATH"
