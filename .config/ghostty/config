@@ -1,0 +1,22 @@
+# Ghostty config — ported from dotfiles/.wezterm.lua
+
+# Catppuccin Macchiato (Ghostty 1.2.0+ 는 대문자+공백 이름)
+theme = Catppuccin Macchiato
+
+# 글씨 크기 — 작으면 이 숫자를 키우세요
+font-size = 19
+font-family = "JetBrains Mono"
+
+# 탭바 숨김 (tmux 사용)
+window-show-tab-bar = never
+
+background-opacity = 0.96
+# background-blur = 20
+
+# 비활성 네이티브 분할창 흐리게 (tmux 분할엔 무관)
+unfocused-split-opacity = 0.8
+
+# 커서/선택 색 (theme 아래에 둬야 덮어씀)
+cursor-color = #F4DBD6
+cursor-text = #24273A
+selection-background = #6E738D
