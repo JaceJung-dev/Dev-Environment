@@ -4,11 +4,9 @@ local keymap = vim.keymap -- for conciseness
 
 keymap.set({ "n", "v", "o" }, "<Space>", "<Nop>", { silent = true })
 
-keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
-
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlight" })
 
-keymap.set("n", "<F1>", "<Nop>", { desc = "Disable help" })
+keymap.set({ "n", "i", "v" }, "<F1>", "<Nop>", { desc = "Disable help" })
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
