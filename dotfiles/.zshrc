@@ -1,5 +1,15 @@
 # ===============================
-# 0. Tmux Auto Start
+# 0. Minimal shell for VSCode CodeLLDB debug sessions
+# ===============================
+# Skip heavy init (oh-my-zsh, p10k, plugins) so the debug session starts cleanly.
+if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+    PS1='%n@%m %~ %# '
+    setopt INTERACTIVE_COMMENTS
+    return 0
+fi
+
+# ===============================
+# 1. Tmux Auto Start
 # ===============================
 if command -v tmux &> /dev/null \
     && [ -z "$TMUX" ] \
