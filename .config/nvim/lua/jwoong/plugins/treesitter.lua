@@ -18,6 +18,9 @@ return {
 			"javascript",
 			"typescript",
 			"tsx",
+			-- Rust
+			"rust",
+			"toml",
 			-- Config & Data formats
 			"json",
 			"yaml",
