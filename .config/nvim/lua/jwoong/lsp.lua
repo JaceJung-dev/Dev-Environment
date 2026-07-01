@@ -65,4 +65,6 @@ vim.diagnostic.config({
       [severity.INFO] = " ",
     },
   },
+  -- 오류/경고 메시지를 해당 줄 오른쪽에 인라인으로 표시
+  virtual_text = true,
 })
