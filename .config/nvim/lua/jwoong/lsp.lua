@@ -49,6 +49,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
     opts.desc = "Restart LSP"
     keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+    opts.desc = "Toggle inline diagnostics (virtual_text)"
+    keymap.set("n", "<leader>xv", function()
+      local enabled = vim.diagnostic.config().virtual_text
+      vim.diagnostic.config({ virtual_text = not enabled })
+      vim.notify("Inline diagnostics " .. (not enabled and "enabled" or "disabled"))
+    end, opts) -- toggle inline diagnostic messages
   end,
 })
 
