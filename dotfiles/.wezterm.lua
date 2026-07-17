@@ -9,7 +9,7 @@ config.font_size = 19
 
 -- Keep adding configuration options here
 
-config.enable_tab_bar = false
+config.enable_tab_bar = true
 config.window_background_opacity = 0.96
 config.inactive_pane_hsb = {
 	saturation = 0.9,
