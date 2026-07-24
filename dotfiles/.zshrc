@@ -319,3 +319,6 @@ export BAT_THEME="Catppuccin Macchiato"
 
 # Added by Antigravity CLI installer
 export PATH="/Users/jwoong/.local/bin:$PATH"
+
+# Add Golang
+export PATH="$PATH:$(go env GOPATH)/bin"
