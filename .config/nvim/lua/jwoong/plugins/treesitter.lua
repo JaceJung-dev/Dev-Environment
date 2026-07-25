@@ -21,6 +21,11 @@ return {
 			-- Rust
 			"rust",
 			"toml",
+			-- Go
+			"go",
+			"gomod",
+			"gosum",
+			"gowork",
 			-- Config & Data formats
 			"json",
 			"yaml",

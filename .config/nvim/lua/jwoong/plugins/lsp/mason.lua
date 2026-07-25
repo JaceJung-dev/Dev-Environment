@@ -11,6 +11,7 @@ return {
         "cssls", -- CSS
         "tailwindcss", -- Tailwind CSS
         "pyright", -- python
+        "gopls", -- Go
         "ltex", -- spell/grammar check
       },
     },
@@ -39,6 +40,8 @@ return {
         "black",
         "ruff",
         "eslint_d",
+        "goimports", -- Go formatter (gofmt + import 정리)
+        "golangci-lint", -- Go linter
       },
     },
     dependencies = {

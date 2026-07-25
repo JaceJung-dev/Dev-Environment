@@ -14,6 +14,9 @@ return {
 			typescript = { "eslint_d" },
 			javascriptreact = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
+
+			-- Go
+			go = { "golangcilint" },
 		}
 
 		-- Auto-lint on save and when leaving insert mode

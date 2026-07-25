@@ -11,6 +11,7 @@ return {
         c = { "clang-format" },
         cpp = { "clang-format" },
         rust = { "rustfmt" },
+        go = { "goimports" },
         javascript = { "prettierd" },
         typescript = { "prettierd" },
         javascriptreact = { "prettierd" },

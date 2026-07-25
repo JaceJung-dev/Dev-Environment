@@ -17,6 +17,7 @@ return {
             "python", -- debugpy
             "codelldb", -- C/C++
             "js", -- vscode-js-debug (JS/TS)
+            "delve", -- Go
           },
           handlers = {}, -- 기본 핸들러 적용 (필수)
         },
@@ -191,6 +192,34 @@ return {
         end,
         desc = "Debug Test Class",
         ft = "python",
+      },
+    },
+  },
+
+  -- Go 전용 확장
+  {
+    "leoluz/nvim-dap-go",
+    ft = "go",
+    dependencies = "mfussenegger/nvim-dap",
+    config = function()
+      require("dap-go").setup()
+    end,
+    keys = {
+      {
+        "<leader>dgt",
+        function()
+          require("dap-go").debug_test()
+        end,
+        desc = "Debug Test Method",
+        ft = "go",
+      },
+      {
+        "<leader>dgl",
+        function()
+          require("dap-go").debug_last_test()
+        end,
+        desc = "Debug Last Test",
+        ft = "go",
       },
     },
   },
