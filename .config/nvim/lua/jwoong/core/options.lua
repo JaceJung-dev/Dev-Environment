@@ -37,6 +37,10 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as defaulf register
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
+-- session: 'localoptions' keeps filetype and highlighting after a restore,
+-- which auto-session requires (see :checkhealth auto-session)
+opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
 -- file auto reload
 opt.autoread = true
 

@@ -5,9 +5,9 @@ return {
 
 		auto_session.setup({
 			-- Disable auto restore on startup (manual only)
-			auto_restore_enabled = false,
+			auto_restore = false,
 			-- Don't auto-save session in these directories
-			auto_session_suppress_dirs = { "~/", "~/Downloads", "~/Documents", "~/Desktop/" },
+			suppressed_dirs = { "~/", "~/Downloads", "~/Documents", "~/Desktop/" },
 		})
 
 		local keymap = vim.keymap
