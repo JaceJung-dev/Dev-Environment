@@ -15,6 +15,12 @@ return {
         "docker_language_server", -- Dockerfile/Compose/Bake
         "ltex", -- spell/grammar check
       },
+      -- Installed mason packages are auto-enabled as LSP servers when they have
+      -- an lspconfig mapping. stylua is a formatter run through conform, so its
+      -- LSP would only add an idle client on every lua buffer.
+      automatic_enable = {
+        exclude = { "stylua" },
+      },
     },
     dependencies = {
       {
