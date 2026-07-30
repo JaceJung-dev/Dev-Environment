@@ -1,12 +1,23 @@
 # Place a copy of this config to ~/.aerospace.toml
 # After that, you can edit ~/.aerospace.toml to your liking
 
+# Config version for compatibility and deprecations
+# See: https://nikitabobko.github.io/AeroSpace/guide#config-version
+# Fallback value (if you omit the key): config-version = 1
+config-version = 2
+
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+# 's6' comes first so the secondary monitor shows it, 'm1' last so it keeps the focus.
+# With a single monitor 'secondary' resolves to nothing, so 's6' is not pinned and 'm1' wins.
+after-startup-command = ['workspace s6', 'workspace m1']
 
 # Start AeroSpace at login
 start-at-login = true
+
+# Automatically reload the config when the config file is saved
+# After setting this to true, reload once manually to start the auto-reloading
+auto-reload-config = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -37,6 +48,19 @@ on-focus-changed = "move-mouse window-lazy-center"
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = false
+
+# List of workspaces that should stay alive even when they contain no windows,
+# even when they are invisible.
+# This config option is only available since 'config-version = 2'
+# Fallback value (if you omit the key): persistent-workspaces = []
+persistent-workspaces = ["m1", "m2", "m3", "m4", "m5",
+                         "s6", "s7", "s8", "s9", "s10",
+                         "B", "E", "M", "T"]
+
+# Focus the window under the mouse cursor without clicking
+# Keep it false while 'on-focus-changed = move-mouse ...' is set above
+# See https://nikitabobko.github.io/AeroSpace/guide#focus-follows-mouse
+focus-follows-mouse.enabled = false
 
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
