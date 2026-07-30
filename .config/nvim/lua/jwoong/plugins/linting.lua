@@ -6,8 +6,8 @@ return {
 
 		-- Configure linters for each filetype
 		lint.linters_by_ft = {
-			-- Python
-			python = { "ruff" }, -- alternative: pylint
+			-- Python: handled by the ruff LSP server (diagnostics + code actions),
+			-- so it is intentionally absent here to avoid duplicate diagnostics.
 
 			-- Web Development
 			javascript = { "eslint_d" },
