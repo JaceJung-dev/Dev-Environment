@@ -12,6 +12,7 @@ return {
         "tailwindcss", -- Tailwind CSS
         "pyright", -- python
         "gopls", -- Go
+        "docker_language_server", -- Dockerfile/Compose/Bake
         "ltex", -- spell/grammar check
       },
     },
