@@ -10,6 +10,7 @@ return {
         "html", -- HTML
         "cssls", -- CSS
         "tailwindcss", -- Tailwind CSS
+        "emmet_ls", -- HTML/JSX abbreviation expansion
         "pyright", -- python
         "gopls", -- Go
         "docker_language_server", -- Dockerfile/Compose/Bake
