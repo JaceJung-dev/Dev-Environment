@@ -325,3 +325,6 @@ export PATH="/Users/jwoong/.local/bin:$PATH"
 
 # Add Golang
 export PATH="$PATH:$(go env GOPATH)/bin"
+
+# Added by cua-driver-rs installer — see https://github.com/trycua/cua
+export PATH="/Users/jwoong/.local/bin:$PATH"
