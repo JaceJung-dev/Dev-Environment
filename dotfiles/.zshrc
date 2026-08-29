@@ -328,3 +328,7 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 
 # Added by cua-driver-rs installer — see https://github.com/trycua/cua
 export PATH="/Users/jwoong/.local/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
