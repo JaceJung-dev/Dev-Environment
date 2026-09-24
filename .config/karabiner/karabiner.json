@@ -35,8 +35,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -73,8 +79,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -96,8 +108,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -124,8 +142,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -147,8 +171,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -170,8 +200,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -193,8 +229,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -216,8 +258,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -244,8 +292,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -272,8 +326,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -300,8 +360,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -328,8 +394,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -356,8 +428,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -384,8 +462,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -412,8 +496,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -440,8 +530,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -468,8 +564,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -491,8 +593,14 @@
                                     {
                                         "identifiers": [
                                             { "is_built_in_keyboard": true },
-                                            { "product_id": 21811, "vendor_id": 1046 },
-                                            { "product_id": 544, "vendor_id": 1452 }
+                                            {
+                                                "product_id": 21811,
+                                                "vendor_id": 1046
+                                            },
+                                            {
+                                                "product_id": 544,
+                                                "vendor_id": 1452
+                                            }
                                         ],
                                         "type": "device_if"
                                     }
@@ -936,6 +1044,186 @@
                                 },
                                 "to": [{ "key_code": "grave_accent_and_tilde" }],
                                 "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "f20_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f1" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "f20_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f2" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "f20_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f3" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "f20_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "4",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f4" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "f20_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "5",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f5" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "f20_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "6",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f6" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "f20_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "7",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f7" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "f20_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "8",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f8" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "f20_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "9",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f9" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "f20_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "0",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f10" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "f20_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "hyphen",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f11" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "f20_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "equal_sign",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f12" }],
+                                "type": "basic"
                             }
                         ]
                     }
@@ -950,14 +1238,6 @@
                         "vendor_id": 13364
                     },
                     "ignore": false
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": true,
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 37,
-                        "vendor_id": 1278
-                    }
                 },
                 {
                     "identifiers": {
@@ -977,6 +1257,34 @@
                         "vendor_id": 1452
                     },
                     "ignore": false
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 33,
+                        "vendor_id": 13807
+                    },
+                    "ignore": false
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 1,
+                        "vendor_id": 14477
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 1,
+                        "vendor_id": 14477
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false
                 }
             ],
             "name": "Default profile",
