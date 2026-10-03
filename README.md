@@ -9,6 +9,7 @@
 - **WezTerm** - 모던 GPU 가속 터미널
 - **Tmux** - 터미널 멀티플렉서
 - **Aerospace** - 타일링 윈도우 매니저
+- **Hammerspoon** - vim용 ESC 입력 시 영문 입력 전환
 
 ## Neovim 설정
 
@@ -244,6 +245,7 @@ ln -s ~/dev_env/.config/aerospace ~/.config/aerospace
 ln -s ~/dev_env/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dev_env/dotfiles/.wezterm.lua ~/.wezterm.lua
 ln -s ~/dev_env/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/dev_env/dotfiles/.hammerspoon ~/.hammerspoon
 
 # lazygit 설치 (macOS)
 brew install lazygit
