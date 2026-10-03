@@ -79,3 +79,7 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,lua
 
+
+### Dev Environment ###
+# Hammerspoon 이 런타임에 내려받는 Spoons
+dotfiles/.hammerspoon/Spoons/

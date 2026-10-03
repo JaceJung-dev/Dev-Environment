@@ -160,45 +160,49 @@ export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-. "$HOME/.local/bin/env"
+[[ -s "$HOME/.local/bin/env" ]] && . "$HOME/.local/bin/env"
 
 # ===============================
 # 2. Completion System
 # ===============================
 
 # Docker CLI completions
-fpath=(/Users/jwoong/.docker/completions $fpath)
+fpath=("$HOME/.docker/completions" $fpath)
 autoload -Uz compinit
 compinit
 
 # uv
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
-compdef _gnu_generic uv
+if (( $+commands[uv] )); then
+  eval "$(uv generate-shell-completion zsh)"
+  eval "$(uvx --generate-shell-completion zsh)"
+  compdef _gnu_generic uv
+fi
 
 # bun completions
-[ -s "/Users/jwoong/.bun/_bun" ] && source "/Users/jwoong/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # Pixi (Conda replacement)
-eval "$(pixi completion --shell zsh)"
+(( $+commands[pixi] )) && eval "$(pixi completion --shell zsh)"
 
 # ===============================
 # 3. Shell Integration & Init
 # ===============================
 
 # Pyenv
-eval "$(pyenv init - zsh)"
+(( $+commands[pyenv] )) && eval "$(pyenv init - zsh)"
 
 # Zsh: always resolve to physical path (fixes case mismatch on macOS APFS)
 setopt CHASE_LINKS
 
 # Zoxide (better cd)
 export _ZO_RESOLVE_SYMLINKS=1  # store real path in DB (fixes case mismatch on macOS APFS)
-eval "$(zoxide init zsh)"
+(( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
 
 # Thefuck
-eval $(thefuck --alias)
-eval $(thefuck --alias fk)
+if (( $+commands[thefuck] )); then
+  eval $(thefuck --alias)
+  eval $(thefuck --alias fk)
+fi
 
 # Yazi (file manager)
 function y() {
@@ -214,7 +218,7 @@ function y() {
 # ===============================
 
 # zoxide
-alias cd="z"
+(( $+commands[zoxide] )) && alias cd="z"
 
 # Python
 alias py_venv="python3 -m venv venv"
@@ -262,7 +266,7 @@ alias vg='valgrind --leak-check=yes --suppressions=$HOME/.valgrind/macos.supp'
 # ===============================
 
 # key bindings and fuzzy completion
-source <(fzf --zsh)
+(( $+commands[fzf] )) && source <(fzf --zsh)
 
 # --- catppuccin macchiato theme ---
 bg="#24273a"
@@ -309,7 +313,7 @@ _fzf_comprun() {
 }
 
 # fzf-git integration
-source ~/fzf-git.sh/fzf-git.sh
+[[ -f ~/fzf-git.sh/fzf-git.sh ]] && source ~/fzf-git.sh/fzf-git.sh
 
 # ===============================
 # 6. Tool Themes
@@ -320,14 +324,24 @@ export BAT_THEME="Catppuccin Macchiato"
 
 
 
-# Added by Antigravity CLI installer
-export PATH="/Users/jwoong/.local/bin:$PATH"
+# ~/.local/bin (Antigravity CLI, cua-driver-rs 등 설치 경로)
+export PATH="$HOME/.local/bin:$PATH"
 
 # Add Golang
-export PATH="$PATH:$(go env GOPATH)/bin"
+(( $+commands[go] )) && export PATH="$PATH:$(go env GOPATH)/bin"
 
-# Added by cua-driver-rs installer — see https://github.com/trycua/cua
-export PATH="/Users/jwoong/.local/bin:$PATH"
+# ===============================
+# 7. Role / Host Specific
+# ===============================
+
+# 역할(client|server)은 install.sh 가 ~/.dotfiles-role 에 기록한다. 없으면 client.
+export DOTFILES_DIR="$HOME/.dotfiles"
+export DOTFILES_ROLE=client
+[[ -r ~/.dotfiles-role ]] && DOTFILES_ROLE=$(<~/.dotfiles-role)
+[[ -f "$DOTFILES_DIR/dotfiles/roles/$DOTFILES_ROLE/zshrc.zsh" ]] && source "$DOTFILES_DIR/dotfiles/roles/$DOTFILES_ROLE/zshrc.zsh"
+
+# git 으로 관리하지 않는 기기별 설정 (비밀값, 실험용 등)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

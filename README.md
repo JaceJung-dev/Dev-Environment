@@ -236,20 +236,32 @@
 ```bash
 # 레포 클론
 git clone https://github.com/JaceJung-dev/Dev-Envionment.git ~/dev_env
-
 cd ~/dev_env
 
-# 심볼릭 링크 생성
-ln -s ~/dev_env/.config/nvim ~/.config/nvim
-ln -s ~/dev_env/.config/aerospace ~/.config/aerospace
-ln -s ~/dev_env/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dev_env/dotfiles/.wezterm.lua ~/.wezterm.lua
-ln -s ~/dev_env/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dev_env/dotfiles/.hammerspoon ~/.hammerspoon
+# 역할을 지정해 심볼릭 링크 생성 (기존 파일은 *.backup.<날짜> 로 백업)
+./install.sh client   # 맥북: SSH 로 접속하는 쪽
+./install.sh server   # 맥미니: SSH 로 접속받는 쪽 (에이전트 서버)
+
+# tmux 안에서 prefix + I 로 tpm 플러그인 설치
 
 # lazygit 설치 (macOS)
 brew install lazygit
 ```
+
+## 기기별 설정 (client / server)
+
+하나의 브랜치로 두 기기를 관리하고, `~/.dotfiles-role` 에 기록된 역할에 따라 `dotfiles/roles/<role>/` 의 설정을 추가로 불러온다.
+
+| | client (맥북) | server (맥미니) |
+|---|---|---|
+| tmux 상태바 | 노란색 | 빨간색 + 창 제목에 호스트명 |
+| 프롬프트 | 기본 | 맨 앞에 빨간 `󰒋 hostname` 배지 |
+| `ssh` | 접속 중 터미널 배경을 붉은 톤으로 변경 (`DOTFILES_REMOTE_BG`) | - |
+| nested tmux | `F12` 로 로컬 tmux 키 입력 끄기/켜기 | - |
+
+- 공통 설정: `dotfiles/.zshrc`, `dotfiles/.tmux.conf`, `dotfiles/.p10k.zsh`
+- 역할별 설정: `dotfiles/roles/{client,server}/{zshrc.zsh,tmux.conf}`
+- git 으로 관리하지 않는 기기 고유 설정: `~/.zshrc.local`, `~/.tmux.local.conf`
 
 ## Credits
 
