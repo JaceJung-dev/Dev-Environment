@@ -1,8 +1,8 @@
 # 클라이언트(맥북) 전용 zsh 설정 — .zshrc 끝에서 source 된다.
 
-# SSH 접속 중에는 터미널 배경을 붉은 톤으로 바꿔 원격임을 표시하고, 종료 시 원복한다.
+# SSH 접속 중에는 터미널 배경색을 바꿔 원격임을 표시하고, 종료 시 원복한다.
 # 로컬 tmux 안이면 해당 pane 스타일을, 아니면 OSC 11/111 로 터미널 배경을 바꾼다.
-: ${DOTFILES_REMOTE_BG:='#3b2233'}
+: ${DOTFILES_REMOTE_BG:='#212734'}
 
 _dotfiles_bg_set() {
   if [[ -n $TMUX ]]; then

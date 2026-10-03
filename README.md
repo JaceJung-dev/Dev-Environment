@@ -254,9 +254,9 @@ brew install lazygit
 
 | | client (맥북) | server (맥미니) |
 |---|---|---|
-| tmux 상태바 | 노란색 | 빨간색 + 창 제목에 호스트명 |
-| 프롬프트 | 기본 | 맨 앞에 빨간 `󰒋 hostname` 배지 |
-| `ssh` | 접속 중 터미널 배경을 붉은 톤으로 변경 (`DOTFILES_REMOTE_BG`) | - |
+| tmux 상태바 | 노란색 | 파란색 + 창 제목에 호스트명 |
+| 프롬프트 | 기본 | 사과 아이콘 대신 `󰒋 macmini` 배지 (`DOTFILES_HOST_LABEL`) |
+| `ssh` | 접속 중 터미널 배경을 `#212734` 로 변경 (`DOTFILES_REMOTE_BG`) | - |
 | nested tmux | `F12` 로 로컬 tmux 키 입력 끄기/켜기 | - |
 
 - 공통 설정: `dotfiles/.zshrc`, `dotfiles/.tmux.conf`, `dotfiles/.p10k.zsh`
